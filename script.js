@@ -85,7 +85,7 @@ function updateBtn(){
         btn.textContent="Start machine"
         txt.textContent="The machine is stopped"
     }
-}   */
+}   
 console.log(23+7)
 console.log(2+4+4+4+3+3)
 console.log((4+6+9)/77)
@@ -119,4 +119,38 @@ let notResult=!true
 console.log("Is num1 greater than num2?", isGreater)
 console.log("AND Result:", andResult)
 console.log("OR Result:", orResult)
-console.log("NOT Result:", notResult)
+console.log("NOT Result:", notResult) */
+
+
+//const temperature = prompt( "enter the current temperature")
+const select = document.querySelector("select");
+const para = document.querySelector("p");
+
+
+select.addEventListener("change", setWeather);
+
+function setWeather() {
+const choice = select.value;
+
+switch (choice) {
+    case "sunny":
+        para.textContent = `It is sunny outside. Let's go out to the beach, or to the party, and get ice cream.`;
+        break;
+
+    case "rainy":
+        para.textContent = "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+        break;
+
+    case "snowing":
+        para.textContent = "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+        break;
+
+    case "overcast":
+        "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+        break;
+
+    default:
+        para.textContent = "";
+
+}
+}
